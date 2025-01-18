@@ -6,13 +6,15 @@ import { cartReducer } from "./redux/cartReducer"
 import { Provider } from "react-redux"
 import { PersistGate } from "redux-persist/integration/react"
 import { itemReducer } from "./redux/itemReducer"
+import { authReducer } from "./redux/authReducer"
 
 
 function App() {
   
 let rootReducer=combineReducers({
   itemStore: itemReducer,
-  cartStore: cartReducer
+  cartStore: cartReducer,
+  authStore:authReducer
 })
 const persistConfig = {
   key: 'root',

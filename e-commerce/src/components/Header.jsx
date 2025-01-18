@@ -70,7 +70,7 @@ const Header = () => {
                 >
                   Category <i className="fa fa-chevron-down ms-1"></i>
                 </button>
-                {showCategoryDropdown && (
+                {showCategoryDropdown &&(
                   <div className="absolute left-0 w-32 bg-gray-800 shadow-md rounded-md mt-2">
                     {/* Example dropdown items */}
                     <Link to="/category/1" className="block px-4 py-2 text-sm text-white">Category 1</Link>
@@ -124,7 +124,7 @@ const Header = () => {
             {/* Notification and Cart Icons (only visible on md screens and above) */}
             <div className="hidden md:flex space-x-4">
               <button className="text-gray-400 hover:text-white">
-                <i className="fa fa-bell text-2xl"></i>
+                {/* <i className="fa fa-bell text-2xl"></i> */}
               </button>
               <button className="text-gray-400 hover:text-white">
                 <Link to="/cart">

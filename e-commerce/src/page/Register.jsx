@@ -30,12 +30,34 @@ const Register = () => {
     } else if (user.password !== user.confirmPassword) {
       setError("Passwords do not match!");
     } else {
-      setError("");
+      Swal.fire({
+        title: "Error",
+        text:"Something is wrong you did not match the required fields",
+        icon: "warning",
+        timerProgressBar: true,
+        timer: 2000,
+      });
       register(user).then((response) => {
         if (response.error) {
-          console.log(response.error);
+          Swal.fire({
+            title: "Error",
+            html: response.error,
+            icon: "warning",
+            timerProgressBar: true,
+            timer: 2000,
+          });
+          
         } else {
-          console.log(response.message);
+          Swal.fire({
+            title: "Success",
+            html: response.message,
+            icon: "success",
+            timerProgressBar: true,
+            timer: 2000,
+            customClass: {
+              icon: 'rotate-y',
+          },
+          });
         }
       });
     }
